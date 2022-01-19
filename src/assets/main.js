@@ -77,17 +77,17 @@ const addToCart = async (id) => {
 
 
 }
-const removeFromCart = async (id) => {
+const removeFromCart =  (id) => {
   try {
-    const result = await axios({
+    const result =  axios({
       method: 'put',
       url: "/api/cart/" + id
     })
     console.log(result)
-    alert("Removed to cart")
     $('#all_products').empty()
     $('#cart').empty()
     getProducts()
+    alert("Removed to cart")
   } catch (error) {
     console.log(error)
     alert("Can not remove to cart")
