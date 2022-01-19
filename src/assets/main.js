@@ -87,6 +87,8 @@ const removeFromCart = async (id) => {
     alert("Removed to cart")
     $('#all_products').empty()
     $('#cart').empty()
+    $('#all_products').empty()
+    $('#cart').empty()
     getProducts()
   } catch (error) {
     console.log(error)
