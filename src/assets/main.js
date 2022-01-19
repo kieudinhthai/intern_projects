@@ -87,8 +87,6 @@ const removeFromCart = async (id) => {
     alert("Removed to cart")
     $('#all_products').empty()
     $('#cart').empty()
-    $('#all_products').empty()
-    $('#cart').empty()
     getProducts()
   } catch (error) {
     console.log(error)
@@ -138,7 +136,7 @@ const quantityDown = (id, price) => {
       }
     }
   }
-  if(count ==0){
+  if(count <=0){
     removeFromCart(id)
   }
   total(sum)
